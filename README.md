@@ -56,13 +56,17 @@ https://github.com/SC-WSKun/RTCDemo
 
 最后是关于能否实现监控视频流的播放：
 
-> `getUserMedia`返回的是`MediaStream`类型的流，而且`MediaRecorder`的参数也需要是`MediaStream`，所以剩下的难点是能否将rtmp等流媒体转换成`MediaStream`，或者采用其他方式，等拿到视频流后再进行测试
+> `getUserMedia`返回的是`MediaStream`类型的流，而且`MediaRecorder`的参数也需要是`MediaStream`，所以剩下的难点是能否将rtmp等流媒体转换成`MediaStream`，也就是能不能转换成Blob类型，等拿到视频流后再进行测试
+>
+> 如果使用mjpg的话，目前找到的一种方式是：保存成图片然后用opencv写程序再存成视频，不过用的是cpp
+>
+> 参考链接：https://blog.csdn.net/qq_33383940/article/details/79893324
 
 # 参考资料汇总
 
 1. [Web mdn](https://developer.mozilla.org/en-US/)
-
-2. [改装videoplayer插件，实现html播放RTMP视频](https://www.cnblogs.com/wobuchifanqie/p/10983840.html)
-3. [将本地 mjpg 视频流式传输到 html 画布](https://www.it1352.com/2695768.html)
-4. [五分钟拆解流媒体入门项目 MJPG-Streamer](https://zhuanlan.zhihu.com/p/499131456)
+2. [WebRTC本地媒体——媒体模型](https://blog.csdn.net/ice_ly000/article/details/100536016)
+3. [改装videoplayer插件，实现html播放RTMP视频](https://www.cnblogs.com/wobuchifanqie/p/10983840.html)
+4. [将本地 mjpg 视频流式传输到 html 画布](https://www.it1352.com/2695768.html)
+5. [五分钟拆解流媒体入门项目 MJPG-Streamer](https://zhuanlan.zhihu.com/p/499131456)
 
