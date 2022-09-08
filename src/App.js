@@ -76,7 +76,7 @@ function App() {
     //录制结束触发
     //@e: 录制的数据
     let getRecordingData = (e) => {
-        console.log("保存的数据",e)
+        console.log("保存的数据",typeof(e))
         let tempChunks = chunks;
         tempChunks.push(e.data)
         handleChunks(tempChunks)
